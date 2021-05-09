@@ -1,0 +1,40 @@
+[package]
+authors = ["Thales Substrate <thales.network>"]
+description = 'FRAME pallet template for defining custom runtime logic.'
+edition = '2018'
+homepage = 'https://thales.network'
+license = 'GPL-3.0-or-later'
+name = 'pallet-template'
+repository = 'https://github.com/substrate-developer-hub/substrate-neuchain/'
+version = '0.1.0'
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+# alias "parity-scale-code" to "codec"
+[dependencies.codec]
+default-features = false
+features = ['derive']
+package = 'parity-scale-codec'
+version = '2.0.0'
+
+[dependencies]
+frame-support = { default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "frontier" }
+frame-system = { default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "frontier" }
+
+[dev-dependencies]
+serde = { version = "1.0.119" }
+sp-core = { default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "frontier" }
+sp-io = { default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "frontier" }
+sp-runtime = { default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "frontier" }
+hex-literal = "0.3.1"
+pallet-evm = {  default-features = false, git = "https://github.com/paritytech/frontier", branch = "master" }
+
+[features]
+default = ['std']
+std = [
+    'codec/std',
+    'frame-support/std',
+    'frame-system/std',
+    'pallet-evm/std'
+]
