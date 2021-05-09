@@ -309,7 +309,7 @@ impl pallet_evm::GasWeightMapping for DexchainGasWeightMapping {
 }
 
 parameter_types! {
-    pub const ChainId: u64 = 3603102;
+    pub const ChainId: u64 = 20490615;
     pub BlockGasLimit: U256
         = U256::from(NORMAL_DISPATCH_RATIO * MAXIMUM_BLOCK_WEIGHT / WEIGHT_PER_GAS);
 }
