@@ -183,31 +183,31 @@ fn thales_staging_config_genesis(wasm_binary: &[u8]) -> GenesisConfig {
         wasm_binary,
         vec![
             (
-                hex!["062e8d3f21c7cc417c6eca7ebdc271f1958eedd4dc635eb9bafc9a795e7ce702"]
+                hex!["282096d77ffea749cacb77332d3bc97a5faa2070dd103e8d0faa4f68e8f12922"]
                     .unchecked_into(),
-                hex!["96f9f64bf2e1fee469b4fc730ddb1344e890cdb731e3e3c6f90a42a78cb82fed"]
-                    .unchecked_into(),
-            ),
-            (
-                hex!["8ebbc1a5394866ea9d17a69de6812001da0b7be2b2c1c354518774ba2e36aa25"]
-                    .unchecked_into(),
-                hex!["65cdd2f9d41d3d1f2ed805ec4b65a33bf922d944527991349ec4242cf6f34303"]
+                hex!["80396502034665c5c491a2a31592fefadb613b6498bcf8d6a9245949416b92a5"]
                     .unchecked_into(),
             ),
             (
-                hex!["8e1cf7aa17f84ca4aae26989bf32ff6005af30579d76d4459e4edf210c9f3a3f"]
+                hex!["eecc70b5635b6508c38733035b3d78cd52798a2e69cad299b1626e4f789d3330"]
                     .unchecked_into(),
-                hex!["bb003d1c37026cf92e30805bfecaf7bd2d88e23aba351d60923d145e3c430ea9"]
+                hex!["be5039c105a74be1f14621fbe22bbe61e5b365816cc5cc58421a3e08c7b8c968"]
+                    .unchecked_into(),
+            ),
+            (
+                hex!["7e5df99677c14dc4019b9c7a20dcc4f9895ceb855481320401985e5cfd481525"]
+                    .unchecked_into(),
+                hex!["1229bedae699d949be52d3029dd8d7fd61db8fbefbd0b87b06404ff6140487ea"]
                     .unchecked_into(),
             ),
         ],
-        // 5E9bvHKRqsBygRTgZ5Yr4cy1f14ntDoV7Q4PGaHBxGBr1qM9
-        hex!["5c34b4b2762e0e3680a8336ef822d4e3ac6d46fff209d4dd3a8220c7f3697848"].into(),
+        // 5CCh84seSNarfXKJ8oVcaL4PFgq88REujb8pBeJ6LyedDx74
+        hex!["06177d9d1a4df0153c25216352265654fe4f0bc1280a6ab1d3b8c542a08d6174"].into(),
         vec![
-            // 5E9bvHKRqsBygRTgZ5Yr4cy1f14ntDoV7Q4PGaHBxGBr1qM9
-            hex!["5c34b4b2762e0e3680a8336ef822d4e3ac6d46fff209d4dd3a8220c7f3697848"].into(),
+            // 5CCh84seSNarfXKJ8oVcaL4PFgq88REujb8pBeJ6LyedDx74
+            hex!["06177d9d1a4df0153c25216352265654fe4f0bc1280a6ab1d3b8c542a08d6174"].into(),
         ],
-        vec![H160::from_str("373944b86Bc07887f2cdcC5EF5E055ee33AC2d3C").unwrap()],
+        vec![H160::from_str("50129bc92EaC7f390a07e9AEc649b67B47A2B3F0").unwrap()],
         vec![],
         vec![],
         true,
@@ -236,7 +236,7 @@ fn testnet_genesis(
             balances: endowed_accounts
                 .iter()
                 .cloned()
-                .map(|k| (k, 200_000_000 * DOLLARS))
+                .map(|k| (k, 10_000_000_000 * DOLLARS))
                 .collect(),
         },
         pallet_aura: thales::AuraConfig {
@@ -259,7 +259,7 @@ fn testnet_genesis(
                 .map(|k| {
                     let account = GenesisAccount {
                         nonce: U256::from(0),
-                        balance: U256::from(200_000_000 * DOLLARS),
+                        balance: U256::from(1_000_000_000 * DOLLARS),
                         storage: Default::default(),
                         code: vec![],
                     };
@@ -284,7 +284,7 @@ fn testnet_genesis(
 
 fn properties() -> Properties {
     let mut properties = Map::new();
-    properties.insert("tokenSymbol".into(), "THALES".into());
+    properties.insert("tokenSymbol".into(), "THALA".into());
     properties.insert("tokenDecimals".into(), 18.into());
     return properties;
 }
