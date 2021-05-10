@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // This file is part of THALES-SUBSTRATE.
 //
-// Copyright (c) 2021 Dexio Technologies.
+// Copyright (c) 2021 Thales Network Technologies.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -323,7 +323,7 @@ impl pallet_evm::Config for Runtime {
     type Currency = Balances;
     type Event = Event;
     type Runner = pallet_evm::runner::stack::Runner<Self>;
-    type Precompiles = DexioPrecompiles<Self>;
+    type Precompiles = Thales NetworkPrecompiles<Self>;
     type ChainId = ChainId;
     type OnChargeTransaction = ();
     type BlockGasLimit = BlockGasLimit;

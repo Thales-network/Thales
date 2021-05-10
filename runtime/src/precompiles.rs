@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // This file is part of THALES-SUBSTRATE.
 //
-// Copyright (c) 2021 Dexio Technologies.
+// Copyright (c) 2021 Thales Network Technologies.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@ use pallet_evm_precompile_simple::{ECRecover, Identity, Ripemd160, Sha256};
 /// We include the nine Istanbul precompiles
 /// (https://github.com/ethereum/go-ethereum/blob/3c46f557/core/vm/contracts.go#L69)
 /// as well as a special precompile for dispatching Substrate extrinsics
-pub type DexioPrecompiles<Runtime> = (
+pub type Thales NetworkPrecompiles<Runtime> = (
 	ECRecover,
 	Sha256,
 	Ripemd160,
