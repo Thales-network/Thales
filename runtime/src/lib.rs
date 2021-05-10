@@ -297,9 +297,9 @@ pub const WEIGHT_PER_GAS: u64 = WEIGHT_PER_SECOND / GAS_PER_SECOND;
 /// Maximum weight per block
 pub const MAXIMUM_BLOCK_WEIGHT: Weight = WEIGHT_PER_SECOND / 2;
 
-pub struct DexchainGasWeightMapping;
+pub struct ThaleschainGasWeightMapping;
 
-impl pallet_evm::GasWeightMapping for DexchainGasWeightMapping {
+impl pallet_evm::GasWeightMapping for ThaleschainGasWeightMapping {
     fn gas_to_weight(gas: u64) -> Weight {
         gas.saturating_mul(WEIGHT_PER_GAS)
     }
@@ -316,7 +316,7 @@ parameter_types! {
 
 impl pallet_evm::Config for Runtime {
     type FeeCalculator = FixedGasPrice;
-    type GasWeightMapping = DexchainGasWeightMapping;
+    type GasWeightMapping = ThaleschainGasWeightMapping;
     type CallOrigin = EnsureAddressTruncated;
     type WithdrawOrigin = EnsureAddressTruncated;
     type AddressMapping = EvmAddressMapping<Runtime>;

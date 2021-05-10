@@ -163,14 +163,14 @@ pub fn thales_staging_testnet_config() -> Result<ChainSpec, String> {
     let boot_nodes = vec![];
 
     Ok(ChainSpec::from_genesis(
-        "Dexchain Staging Testnet",
+        "Thaleschain Staging Testnet",
         "thales_staging_testnet",
         ChainType::Live,
         move || thales_staging_config_genesis(wasm_binary),
         boot_nodes,
         Some(
             TelemetryEndpoints::new(vec![(STAGING_TELEMETRY_URL.to_string(), 0)])
-                .expect("Dexchain Staging telemetry url is valid; qed"),
+                .expect("Thaleschain Staging telemetry url is valid; qed"),
         ),
         Some(DEFAULT_PROTOCOL_ID),
         Some(properties()),
