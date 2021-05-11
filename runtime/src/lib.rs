@@ -323,7 +323,7 @@ impl pallet_evm::Config for Runtime {
     type Currency = Balances;
     type Event = Event;
     type Runner = pallet_evm::runner::stack::Runner<Self>;
-    type Precompiles = Thales NetworkPrecompiles<Self>;
+    type Precompiles = ThalesNetworkPrecompiles<Self>;
     type ChainId = ChainId;
     type OnChargeTransaction = ();
     type BlockGasLimit = BlockGasLimit;

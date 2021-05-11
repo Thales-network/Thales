@@ -27,7 +27,7 @@ use pallet_evm_precompile_simple::{ECRecover, Identity, Ripemd160, Sha256};
 /// We include the nine Istanbul precompiles
 /// (https://github.com/ethereum/go-ethereum/blob/3c46f557/core/vm/contracts.go#L69)
 /// as well as a special precompile for dispatching Substrate extrinsics
-pub type Thales NetworkPrecompiles<Runtime> = (
+pub type ThalesNetworkPrecompiles<Runtime> = (
 	ECRecover,
 	Sha256,
 	Ripemd160,
