@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    'runtime',
+    'node',
+]
+
+[profile.release]
+panic = 'unwind'

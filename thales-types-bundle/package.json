@@ -1,0 +1,31 @@
+{
+  "name": "thales-types-bundle",
+  "version": "1.1.13",
+  "description": "Bundled types to instantiate the Polkadot JS api with a Thales network",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "thales",
+    "thalesrococo",
+    "thaleskusama",
+    "types",
+    "bundle",
+    "polkadot",
+    "api"
+  ],
+  "author": "Elon Hgin",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thales-network/thales.git"
+  },
+  "dependencies": {
+    "@polkadot/keyring": "^6.0.5",
+    "@polkadot/types": "^4.4.1",
+    "typescript": "^4.1.3"
+  }
+}
