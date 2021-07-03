@@ -6,6 +6,32 @@
 👉 _Learn to [use the Thales network](https://docs.thales.network/) with our technical docs._<br>
 👉 _Reference our [crate-level docs (rustdocs)](https://Thales-network.github.io/thales) to contribute._
 
+## Performance
+
+Thales network focus on performance. Thales network block interval is about 1 second, and TPS will reach 1000+ in 2021 Q3, and will believe TPS will reach 5000+ in 2022 Q2.
+
+## Low cost
+
+Thales network will reduce cost for users in following way:
+1. Every address (not include contract) which balance exceed min balance will have several fee Tx fee per day.;
+2. Contract can pay gas fee for user;
+3. Gas fee will be anchored with stable coin, and if payed with Thales token, you will has some discount;
+
+## DPos
+
+Thales network will use Dpos consensus.
+
+Thales network have max 21 main node, 11 backup node. 90% token will give to main node, and 10% to backup node. For main node.
+
+## Two main coin: Thales & StableCoin
+
+In the latter version, Thales will with two coin, Thales & StableCoin.
+
+They have different usage, stable coin can only pay gas fee, and thales can pay gas fee, community governance, and more.
+
+## Oracle
+Thales will have oracle in later version.
+
 ## Run an alphanet node with Docker
 
 Docker images are published for every tagged release. Learn more with `thales --help`.
